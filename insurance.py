@@ -69,12 +69,25 @@ def main():
                                 POLICE_REPORT_AVAILABLE, INCIDENT_HOUR_OF_THE_DAY, Health, Life,
                                 Mobile, Motor, Property, Travel))
     #st.success('The output is {}'.format(result))
-   st.success('Стоимость вашей страховки составляет {}'.format(result)+" USD")
-   if st.button("About"):
+    result=""
+    if st.button("Predict"):
+        result=int(predict_note_authentication(CLAIM_AMOUNT, MARITAL_STATUS, AGE, TENURE,
+                                NO_OF_FAMILY_MEMBERS, RISK_SEGMENTATION, HOUSE_TYPE,
+                                SOCIAL_CLASS, CUSTOMER_EDUCATION_LEVEL, CLAIM_STATUS,
+                                INCIDENT_SEVERITY, AUTHORITY_CONTACTED, ANY_INJURY,
+                                POLICE_REPORT_AVAILABLE, INCIDENT_HOUR_OF_THE_DAY, Health, Life,
+                                Mobile, Motor, Property, Travel)) 
+     #st.success('The output is {}'.format(result))
+    st.success('Predicted cost of the house is {}'.format(result)+" TJS")
+                     
+    
+    if st.button("About program"):
+        
         st.text("Built by Aziz Rasulov")
-
+              
+                  
+        
 if __name__=='__main__':
     main()
-    
     
     
