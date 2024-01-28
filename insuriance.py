@@ -8,7 +8,7 @@ from PIL import Image
 
 
 pickle_in = open("insuriance_CatBoostRegressor.pkl","rb")
-regressor=pickle.load(pickle_in)
+classifier=pickle.load(pickle_in)
 
 
 def welcome():
@@ -30,7 +30,7 @@ def predict_note_authentication(CLAIM_AMOUNT, AGE, TENURE,
                                 CLAIM_STATUS, INCIDENT_SEVERITY, AUTHORITY_CONTACTED,
                                 ANY_INJURY, POLICE_REPORT_AVAILABLE, INCIDENT_HOUR_OF_THE_DAY,
                                 Health, Life, Mobile, Motor, Property, Travel):
-    prediction = regressor.predict([[CLAIM_AMOUNT, AGE, TENURE,
+    prediction = classifier.predict([[CLAIM_AMOUNT, AGE, TENURE,
                                 EMPLOYMENT_STATUS, NO_OF_FAMILY_MEMBERS, RISK_SEGMENTATION,
                                 HOUSE_TYPE, SOCIAL_CLASS, CUSTOMER_EDUCATION_LEVEL,
                                 CLAIM_STATUS, INCIDENT_SEVERITY, AUTHORITY_CONTACTED,
