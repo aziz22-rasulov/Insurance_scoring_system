@@ -29,8 +29,8 @@ def predict_note_authentication(CLAIM_AMOUNT, MARITAL_STATUS, AGE, TENURE,
 def main():
     st.title("Insurance price prediction")
     html_temp = """
-    <div style="background-color:blue;padding:10px">
-    <h2 style="color:white;text-align:center;">Добро пожаловать в систему предсказаний стоимости страхового полиса  </h2>
+    <div style="background-color:yellow;padding:10px">
+    <h2 style="color:black;text-align:center;">Добро пожаловать в систему предсказаний стоимости страхового полиса  </h2>
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
@@ -40,13 +40,13 @@ def main():
     AGE = st.number_input('Сколько вам лет (используйте только цифры)?', step=1, value=0)
     TENURE = st.number_input('На какой срок вы хотите страховой полис (введите количество дней)?', step=1, value=0)
     NO_OF_FAMILY_MEMBERS = st.number_input('Сколько у вас членов семьи (используйте только цифры)?', step=1, value=0)
-    RISK_SEGMENTATION = st.radio('Риск предшествия несчастного случая (0 - L, 1 - M, 2 - H)', (0, 1, 2))
-    HOUSE_TYPE = st.radio('Тип вашего дома (0 - Own, 1 - Rent, 2 - Mortgage)', (0, 1, 2))
-    SOCIAL_CLASS = st.radio('Тип вашего дома (0 - LI, 1 - MI, 2 - HI)', (0, 1, 2))
-    CUSTOMER_EDUCATION_LEVEL = st.radio('Ваш уровень образования (0 - MD, 1 - Masters, 2 - PhD, 3 - Bachelor, 4 - College, 5 - High School, 6 - 0)', (0, 1, 2, 3, 4, 5, 6))
+    RISK_SEGMENTATION = st.radio('Риск предшествия несчастного случая (0 - низкий, 1 - средний, 2 - высокий)', (0, 1, 2))
+    HOUSE_TYPE = st.radio('Тип вашего дома (0 - собственный, 1 - съемный, 2 - ипотечный)', (0, 1, 2))
+    SOCIAL_CLASS = st.radio('К какому социальному классу вы относитесь (0 - нижний, 1 - средний, 2 - высший)', (0, 1, 2))
+    CUSTOMER_EDUCATION_LEVEL = st.radio('Ваш уровень образования (0 - докторантура, 1 - магмстратура, 2 - доктор философии, 3 - бакалавриат, 4 - колледж, 5 - старшая школа, 6 - 0)', (0, 1, 2, 3, 4, 5, 6))
     CLAIM_STATUS = st.radio('Статус обращения за страховым полисом? (0 - A, 1 - D)', (0, 1))
-    INCIDENT_SEVERITY = st.radio('Оцениваемый ущерб инцидента (0 - Minor Loss, 1 - Major Loss, 2 - Total Loss)', (0, 1, 2))
-    AUTHORITY_CONTACTED = st.radio('Кто связался с вами после происшествия (0 - None, 1 - Other, 2 - Ambulance, 3 - Police)', (0, 1, 2, 3))
+    INCIDENT_SEVERITY = st.radio('Оцениваемый ущерб инцидента (0 - незначительный, 1 - средний, 2 - критический)', (0, 1, 2))
+    AUTHORITY_CONTACTED = st.radio('Кто связался с вами после происшествия (0 - никто, 1 - другое, 2 - скорая, 3 - полиция)', (0, 1, 2, 3))
     ANY_INJURY = st.number_input('Были ли у вас какие-то повреждения (0 - да, 1 - нет)?', step=1, value=0)
     POLICE_REPORT_AVAILABLE = st.number_input('Имеется отчет полиции (0 - да, 1 - нет)?', step=1, value=0)
     INCIDENT_HOUR_OF_THE_DAY = st.number_input('Время происшествия (Введите только часы, формат 24-часовой)?', step=1, value=0)
@@ -65,7 +65,7 @@ def main():
                                 INCIDENT_SEVERITY, AUTHORITY_CONTACTED, ANY_INJURY,
                                 POLICE_REPORT_AVAILABLE, INCIDENT_HOUR_OF_THE_DAY, Health, Life,
                                 Mobile, Motor, Property, Travel)
-        st.success('Predicted cost of the house is {} TJS'.format(result))
+        st.success('Predicted cost of the house is {} USD'.format(result))
     
     if st.button("About program"):
         st.text("Built by Aziz Rasulov")
