@@ -69,7 +69,7 @@ def main():
                                 POLICE_REPORT_AVAILABLE, INCIDENT_HOUR_OF_THE_DAY, Health, Life,
                                 Mobile, Motor, Property, Travel))
    
-    st.success('Predicted cost of the house is {}'.format(result)+" TJS")
+       st.success('Predicted cost of the house is {}'.format(result)+" TJS")
                      
     
     if st.button("About program"):
