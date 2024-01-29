@@ -36,7 +36,7 @@ def main():
     st.markdown(html_temp,unsafe_allow_html=True)
     
     CLAIM_AMOUNT = st.number_input('Сколько вы хотите получить от страховой компании в случае несчастного происшествия (используйте только цифры)?', step=1, value=0)
-    MARITAL_STATUS = st.radio('У вас есть семья? (0 - Y, 1 - N)', (0, 1))
+    MARITAL_STATUS = st.radio('У вас есть семья? (0 - да, 1 - нет)', (0, 1))
     AGE = st.number_input('Сколько вам лет (используйте только цифры)?', step=1, value=0)
     TENURE = st.number_input('На какой срок вы хотите страховой полис (введите количество дней)?', step=1, value=0)
     NO_OF_FAMILY_MEMBERS = st.number_input('Сколько у вас членов семьи (используйте только цифры)?', step=1, value=0)
