@@ -29,15 +29,15 @@ def predict_note_authentication(CLAIM_AMOUNT, MARITAL_STATUS, AGE, TENURE,
 def main():
     st.title("Insurance price prediction")
     html_temp = """
-    <div style="background-color:yellow;padding:10px">
-    <h2 style="color:black;text-align:center;">Добро пожаловать в систему предсказаний стоимости страхового полиса  </h2>
+    <div style="background-color:blue;padding:10px">
+    <h2 style="color:white;text-align:center;">Добро пожаловать в систему предсказаний стоимости страхового полиса  </h2>
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
     
     html_temp = """
-    <div style="background-color:yellow;padding:10px">
-    <h2 style="color:black;text-align:center;">Вопросы для клиента  </h2>
+    <div style="background-color:blue;padding:10px">
+    <h2 style="color:white;text-align:center;">Вопросы для клиента  </h2>
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
@@ -56,8 +56,8 @@ def main():
     CUSTOMER_EDUCATION_LEVEL = st.radio('Ваш уровень образования (0 - докторантура, 1 - магмстратура, 2 - доктор философии, 3 - бакалавриат, 4 - колледж, 5 - старшая школа, 6 - 0)', (0, 1, 2, 3, 4, 5, 6))
     
     html_temp = """
-    <div style="background-color:yellow;padding:10px">
-    <h2 style="color:black;text-align:center;">Вопросы для клиента со страховой историей  </h2>
+    <div style="background-color:blue;padding:10px">
+    <h2 style="color:white;text-align:center;">Вопросы для клиента со страховой историей  </h2>
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
@@ -70,8 +70,8 @@ def main():
     INCIDENT_HOUR_OF_THE_DAY = st.number_input('Время происшествия, если у вас есть страховая история с проишествием (Введите только часы, формат 24-часовой)?', step=1, value=0)
     
     html_temp = """
-    <div style="background-color:yellow;padding:10px">
-    <h2 style="color:black;text-align:center;">Вопросы для сотрудника страхового агента  </h2>
+    <div style="background-color:blue;padding:10px">
+    <h2 style="color:white;text-align:center;">Вопросы для страхового агента  </h2>
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
