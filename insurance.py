@@ -27,7 +27,7 @@ def predict_note_authentication(CLAIM_AMOUNT, MARITAL_STATUS, AGE, TENURE,
     return prediction[0]
 
 def main():
-    st.title("Insurance price prediction")
+    st.title("Estimating insurance costs.")
     html_temp = """
     <div style="background-color:yellow;padding:10px">
     <h2 style="color:black;text-align:center;">Добро пожаловать в систему предсказаний стоимости страхового полиса  </h2>
