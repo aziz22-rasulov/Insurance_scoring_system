@@ -65,7 +65,7 @@ def main():
                                 INCIDENT_SEVERITY, AUTHORITY_CONTACTED, ANY_INJURY,
                                 POLICE_REPORT_AVAILABLE, INCIDENT_HOUR_OF_THE_DAY, Health, Life,
                                 Mobile, Motor, Property, Travel)
-        st.success('Predicted cost of the house is {} USD'.format(result))
+        st.success('The predicted cost of insurance is. {} USD'.format(result))
     
     if st.button("About program"):
         st.text("Built by Aziz Rasulov")
