@@ -1,1 +1,1 @@
-It's a insuriance scoring system
+It's an insuriance scoring system
